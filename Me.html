@@ -67,7 +67,39 @@
       p {
         margin: 20px;
       }
+      .form {
+        margin: 20px 20px 60px 20px;
+        border-radius: 5px;
+        border-color: #000957;
+        border-style: solid;
+        font-size: large;
+        padding: 20px;
+      }
+      input[type="text"],
+      select,
+      textarea {
+        width: 100%; /* Full width */
+        padding: 12px; /* Some padding */
+        border: 1px solid #ccc; /* Gray border */
+        border-radius: 4px; /* Rounded borders */
+        box-sizing: border-box; /* Make sure that padding and width stays in place */
+        margin-top: 6px; /* Add a top margin */
+        margin-bottom: 16px; /* Bottom margin */
+        resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+      }
+      input[type="submit"] {
+        background-color: #04aa6d;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #298a2e;
+      }
     </style>
+    <script src="func.js"></script>
   </head>
   <body class="me">
     <h1>Hey, ich bin Lasse ;)</h1>
@@ -135,7 +167,52 @@
       </p>
     </div>
     <hr />
-
+    <div class="form">
+      <p style="font-weight: bold">Kontaktformular:</p>
+      <form action="#" name="form">
+        <label for="fname">Vorname</label
+        ><input
+          type="text"
+          id="fname"
+          name="firstname"
+          placeholder="Dein Vorname.."
+        />
+        <label for="lname">Familienname</label>
+        <input
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="Dein Familienname.."
+        />
+        <label for="email">Email</label>
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="Deine Email-Adresse.."
+        />
+        <label for="region">Region</label>
+        <select name="region" id="region">
+          <option value="Europe">Europa</option>
+          <option value="USA">USA</option>
+          <option value="Asia">Asia</option>
+        </select>
+        <label for="subject">Thema</label>
+        <textarea
+          name="subject"
+          id="subject"
+          cols="30"
+          rows="10"
+          placeholder="Schreib mir gerne.."
+        ></textarea>
+        <input
+          type="submit"
+          value="Abschicken"
+          onclick="ValidateEmail(email)"
+        />
+      </form>
+    </div>
+    <hr />
     <blockquote>
       <p>
         "If debugging is the process of removing software bugs, then programming
