@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frage 1</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" />
+    <script src="func.js"></script>
+  </head>
+  <body class="one">
+    <ul class="navigation">
+      <li><a href="index.html">Start</a></li>
+      <li id="nav1" class="active"><a href="Frage1.html">Frage 1</a></li>
+      <li id="nav2"><a href="Frage2.html">Frage 2</a></li>
+      <li id="nav3"><a href="Frage3.html">Frage 3</a></li>
+      <li id="nav4"><a href="Frage4.html">Frage 4</a></li>
+      <li id="nav5"><a href="Frage5.html">Frage 5</a></li>
+      <li id="nav6"><a href="Frage6.html">Frage 6</a></li>
+      <li id="nav7"><a href="Frage7.html">Frage 7</a></li>
+      <li id="nav8"><a href="Frage8.html">Frage 8</a></li>
+      <li id="nav9"><a href="Frage9.html">Frage 9</a></li>
+      <li id="nav10"><a href="Frage10.html">Frage 10</a></li>
+      <li><a href="Me.html">Über mich</a></li>
+      <li style="float: right"><a href="impressum.html">Impressum</a></li>
+    </ul>
+    <div id="content">
+      <p class="question">Was heißt 'Sonnenuntergang' auf Finnisch?</p>
+
+      <button onclick="clickedWrong()" class="button wrong">
+        A: Dunkelinski
+      </button>
+      <button
+        onclick="clickedRight(), setScore1(), getScore()"
+        class="button right"
+      >
+        B: Hellsinki
+      </button>
+      <button onclick="clickedWrong()" class="button wrong">
+        C: Licht aus
+      </button>
+      <button onclick="clickedWrong()" class="button wrong">
+        D: Schlafenszeit
+      </button>
+
+      <div class="Score">
+        <p>Score = <span id="score"></span></p>
+        <div id="scoreline">
+          <span id="scoreline1"></span><span id="scoreline2"></span
+          ><span id="scoreline3"></span><span id="scoreline4"></span
+          ><span id="scoreline5"></span><span id="scoreline6"></span
+          ><span id="scoreline7"></span><span id="scoreline8"></span
+          ><span id="scoreline9"></span><span id="scoreline10"></span>
+        </div>
+      </div>
+    </div>
+    <div id="reward">
+      <div id="reward1">Herzlichen Glückwunsch,</div>
+      <div id="reward2">das schafft nicht jeder!</div>
+    </div>
+  </body>
+</html>

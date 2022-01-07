@@ -1,0 +1,192 @@
+body {
+  font-style: oblique;
+}
+
+body.zero {
+  background-image: url("imgs/snowboard.jpg");
+  background-position: center;
+  background-size: cover; /* Makes sure the images covers the entire screen */
+}
+body.one {
+  background-image: url("imgs/waves.jpg");
+  background-size: cover;
+}
+body.two {
+  background-image: url("imgs/raps.jpg");
+  background-size: cover;
+}
+body.three {
+  background-image: url("imgs/mountain.jpg");
+  background-size: cover;
+}
+body.four {
+  background-image: url("imgs/ostsee.jpg");
+  background-size: cover;
+}
+body.five {
+  background-image: url("imgs/hawaii.jpg");
+  background-size: cover;
+}
+body.six {
+  background-image: url("imgs/vancouver.jpg");
+  background-size: cover;
+}
+body.seven {
+  background-image: url("imgs/lake.jpg");
+  background-size: cover;
+}
+body.eight {
+  background-image: url("imgs/sunrise.jpg");
+  background-size: cover;
+}
+body.nine {
+  background-image: url("imgs/bergsee.jpg");
+  background-size: cover;
+}
+body.ten {
+  background-image: url("imgs/see.jpg");
+  background-size: cover;
+}
+body.me {
+  background-color: #b8e4f0;
+  margin: 0px; /* Leaves out the space at the edge of the screen*/
+}
+
+.navigation {
+  background-color: #f0bb62;
+  list-style-type: none; /* Removes the dots placed by the <ul> */
+  margin: 0; /* Closer to the top*/
+  overflow: hidden; /* Content is kept within the element */
+  padding: 0;
+}
+.navigation li {
+  border-right: 1px solid #064635; /* Adds a border to the right of each list item */
+  float: left; /* Orders the <li> items from left to right */
+}
+.navigation li:last-child {
+  border-right: none; /* Removes the right border from the last <li> item*/
+}
+.navigation li a {
+  color: white;
+  display: block;
+  padding: 15px 18px;
+  text-align: center;
+  text-decoration: none; /*No underlining*/
+}
+.navigation li a:hover {
+  background-color: #dad992;
+}
+
+.active {
+  background-color: #99a799; /*Selects the active nav-link via class selector*/
+}
+
+.intro {
+  color: #ffca03;
+  cursor: default; /*Default cursor when hovering over element*/
+  font-size: 100pt;
+  margin-top: 50px;
+}
+#intro1 {
+  animation: typing 20s; /*Typing animation for text via @keyframes*/
+  animation-fill-mode: forwards; /* Maintains the final state of the animation instead of setting the width back to 0px. */
+  overflow: hidden; /*Words have to be inside the element*/
+}
+#intro2 {
+  animation: typing 10s;
+  animation-delay: 4s; /* Animation sets in 4s after the animation of #intro1 started.*/
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  width: 0px;
+}
+#intro3 {
+  animation: typing 15s;
+  animation-delay: 8s;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  width: 0px;
+}
+.question {
+  animation: typing 5s;
+  color: gold;
+  cursor: default;
+  font-size: 50pt;
+  margin: 10px 0 10px 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 99%;
+  }
+}
+
+.button {
+  background-color: #daddfc;
+  border: 2px solid rgb(69, 69, 252);
+  border-radius: 15px; /*Adds rounded corners*/
+  box-shadow: 0px 6px #999; /*Creates a shadow*/
+  color: rgb(69, 69, 252);
+  cursor: pointer;
+  font-size: 24px;
+  margin: 20px 10px 10px 10px;
+  padding: 40px 0px;
+  text-align: center;
+  width: 48%;
+}
+.button:hover {
+  background-color: rgb(69, 69, 252);
+  color: white;
+  transition-duration: 0.5s; /*Doesn't change directly*/
+}
+.button:active {
+  /* The :active selector is used to select and style the active link. A link becomes active when you click on it. */
+  box-shadow: 0 0 #999;
+  transform: translateY(
+    6px
+  ); /*Repositions the element in the vertical direction*/
+}
+
+.Score p {
+  color: white;
+  cursor: default;
+  font-size: 45pt;
+  text-align: center;
+}
+
+#scoreline {
+  border: 2px solid white;
+  border-radius: 30%;
+  bottom: 50px;
+  height: 20px;
+  left: 350px;
+  overflow: hidden;
+  position: absolute;
+  width: 600px;
+}
+#scoreline span {
+  border: 1px solid white;
+  overflow: hidden;
+  padding: 5px 29px;
+}
+
+#rewardLink {
+  color: gold;
+  text-decoration: underline;
+}
+#reward {
+  bottom: 350px;
+  color: gold;
+  font-size: 50pt;
+  left: 50px;
+  position: absolute;
+  visibility: hidden;
+  width: 90%;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
